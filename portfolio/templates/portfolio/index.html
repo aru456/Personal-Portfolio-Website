@@ -1,0 +1,263 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpeg" href="{% static 'portfolio/logo.jpeg' %}">
+  <title>DR.PuneetGupta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href=" style.css ">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+   
+            <a class="navbar-brand" href="#">DR.PUNEET GUPTA</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-link"><a class="nav-item" title="education" href="#education">education</a></li>
+                <li class="nav-link"><a class="nav-item" title="experience" href="#experience">experience</a></li>
+                <li class="nav-link"><a class="nav-item" title="publications" href="https://scholar.google.co.in/citations?user=yUB8lNsAAAAJ&hl=en"  target = "_blank" >publications</a></li>
+                <li class="nav-link"><a class="nav-item" title="achievements" href="#achievements">achievements</a></li>
+                <li class="nav-link"><a class="nav-item" title="contact" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+  </div>
+</nav>
+
+
+<div class="container" id="info" style="padding-top: 3%;">
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <div class="text-center avatar">  
+                
+                {% for thing in homethings %}
+                <img src="{{ thing.image.url }}" id = "profile">
+                {% endfor %}
+            </div>
+            <h2 class="text-center">Dr.Puneet Gupta</h2>
+            <h4 class="text-center" style="font-size: x-large;">Assistant Professor</h4>
+            <h4 class="text-center" style="font-size: x-large;">Computer Science and Engineering</h4>
+        </div>
+        <div class="col-sm-8">
+            <div class="text-center">
+                <h5 class="home-text text-left" style="font-family: arial!important; font-size: 1.4em;">
+                {% for thing in homethings %}
+                    {{ thing.heading|safe}}
+                {% endfor %}
+                </h5>
+            </div>
+            <div class="home-text text-left">
+                <ul class="list-group" style="font-family: Arial;">
+                    
+                        <h5 class="text-left" style="font-family: Arial; font-size: 1.4em;">
+                         {% for thing in homethings %}
+                          {{ thing.description|safe}}
+                         {% endfor %}
+
+
+                        </h5>
+                    
+                     
+                           
+                    
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="container translucent-bg blue" style="background-image: url('static/portfolio/back1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; width: 100%; padding-top: 8%; padding-bottom: 10%;" id="education">
+    <div class="container object-non-visible animated object--visible fadeIn" data-animation-effect="fadeIn">
+        <!-- ::before -->
+        <h1 class="text-center title">
+            <span>Education</span>
+        </h1>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="row">
+            <!-- ::before -->
+            <div class="col-md-12">
+                <h2>
+                    {% for thing in educationthings %}
+                    {{ thing.description|safe}}
+                   {% endfor %}
+                    
+                </h2>
+        
+            </div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+        </div>
+    </div>
+</div>
+
+<div class="default-bg space blue" style="padding-top: 5%;" id="experience">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center">
+                    <span>
+                        Work Experience
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="experience-text">
+                    <h2>
+                        {% for thing in experiencethings %}
+                        {{ thing.description |safe}}
+                       {% endfor %}
+                        
+                    </h2>
+                </p>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+    </div>
+</div>
+
+<div class="container translucent-bg blue" style="background-image: url('static/portfolio/back1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; width: 100%; padding-top: 7%; padding-bottom: 5%;" id="achievements">
+    <div class="container object-non-visible animated object--visible fadeIn" data-animation-effect="fadeIn">
+        <!-- ::before -->
+        <h1 class="text-center title">
+            <span>Achievements</span>
+        </h1>
+        <div class="space"></div>
+        <div class="space"></div>
+       
+        <div class="row">
+            <!-- ::before -->
+            <!-- <div class="col-md-12"> -->
+                <div class="isotope-container row grid-space-20">
+                <div class="col-sm-12 col-md-12 isotope-item journal-publications">    
+                    <ul class="list-unstyled">
+                       
+                        {% for thing in achievementthings %}
+                        <li style="font-size: x-large;">
+                            <i class="fa fa-caret-right pr-10 text-colored"></i>
+                            {{ thing.description |safe}}
+                        </li>
+                        {% endfor %}
+
+                        
+                        
+                        
+                    </ul>
+                </div>    
+                </div>    
+            <!-- </div> -->
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+        </div>
+    </div>
+</div>
+
+<footer id="contact" style="margin-bottom: 8%; padding-top: 5%">
+    <div class="footer section">
+        <div class="container">
+            <h1 class="title text-center">Contact details</h1>
+        </div>
+        <div class="space"></div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <div class="footer-content">
+                    <ul class="list-icons">
+                        {% for thing in contactthings %}
+                        <li style="font-size: x-large;">
+                            <i class="fa fa-map-marker pr-10"></i>
+                            {{ thing.address |safe}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="footer-content">
+                    <ul class="list-icons">
+                        <li style="font-size: x-large;">
+                            <i class="fa fa-phone pr-10"></i>
+                            {% for thing in contactthings %}
+                            {{ thing.phone |safe}}
+                           {% endfor %}
+                        </li>
+                        <li style="font-size: x-large;">
+                            <i class="fa fa-envelope-o pr-10"></i>
+                            {% for thing in contactthings %}
+                            {{ thing.email |safe}}
+                           {% endfor %}  
+                         
+
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                
+        </div>
+    </div>
+</footer>
+<div class="container translucent-bg blue" style="background-image: url('static/portfolio/back1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; width: 100%; padding-top: 7%; padding-bottom: 5%;" id="achievements">
+    <div class="container object-non-visible animated object--visible fadeIn" data-animation-effect="fadeIn">      
+
+        <h1 class="text-center title">
+            <span>Students</span>
+        </h1>
+
+{% for thing in studentthings %} 
+
+<div class="col-md-12 ">
+    <div class="container">
+            <table width="100%">
+                <br>
+            <tr>
+                <td width="15%" height="110px"><img width="110px" height="110px" src="{{ thing.image.url }}"></td>
+                <td width="25%" height="110px"><h3>{{ thing.name|safe }}</h3></td>
+                <td width="60%"><h4>{{thing.description|safe}}</h4>
+                   
+                </td>
+             </tr>
+       </table>
+    </div>
+</div>
+
+
+    {% endfor %}
+</div>
+</div>
+    <br>
+    <br>
+
+    
+
+
+
+    
+
+
+
+
+</body>
+</html>

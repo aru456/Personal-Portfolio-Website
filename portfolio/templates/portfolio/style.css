@@ -1,0 +1,139 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.navbar
+{
+	/*margin-bottom: 0!important;*/
+	padding: 0;
+	width: 100%;
+	background-color: black;
+}
+
+.navbar-brand
+{
+	height: 100%;
+	color: white!important;
+	margin: 0;
+}
+
+.navbar-brand:hover
+{
+	color: rgb(0, 230, 115) !important;
+}
+
+.nav-item
+{
+	color: white !important;
+}
+
+.nav-item:hover 
+{
+	color: rgb(0, 230, 115) !important;
+}
+
+/*.container
+{
+	height: 100vh;
+	margin-left: 0!important;
+	margin-right: 0!important;
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+.row
+{
+	width: 100% !important;
+}*/
+
+@media only screen and (max-width: 1300px) and (min-width: 768px)
+{
+	#profile
+	{
+		width: 75%;
+		height: auto;
+	}
+}
+
+
+ 
+@media only screen and (min-width: 768px) and (max-device-aspect-ratio: 768/700) and (max-width: 900px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 900px) and (max-device-aspect-ratio: 900/710) and (max-width: 1000px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 1000px) and (max-device-aspect-ratio: 1000/575) and (max-width: 1200px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 1200px) and (max-device-aspect-ratio: 1250/600) and (max-width: 1500px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 1500px) and (max-device-aspect-ratio: 1500/650) and (max-width: 1700px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 1700px) and (max-device-aspect-ratio: 1700/675) and (max-width: 1850px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 1850px) and (max-device-aspect-ratio: 1850/700) and (max-width: 1950px)
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+@media only screen and (min-width: 1950px) and (max-device-aspect-ratio: 1950/725) 
+{
+	#info
+	{
+		height: 100vh;
+		padding-bottom: 10%;
+	}
+}
+
+.space
+{
+	padding: 20px 0;
+}
+
+
