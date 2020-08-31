@@ -6,7 +6,7 @@ Members:
 
 Sai Aravind
 
-Satwik Tumoju
+Sathvik Tumoju
 
 Rishabh Kadam
 
