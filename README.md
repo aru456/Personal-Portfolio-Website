@@ -8,9 +8,9 @@ Sai Aravind
 
 Satwik Tumoju
 
-Rishab Kadam
+Rishabh Kadam
 
 Shreyansh Jain
 
-Gemin
+Jemin Vagadia
 
